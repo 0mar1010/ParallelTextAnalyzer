@@ -10,8 +10,8 @@ import java.util.Scanner;
 
 public class Main {
     private static final Scanner scanner = new Scanner(System.in);
-    private static final String filePath = "C:\\Users\\omars\\OneDrive\\Desktop\\Large_File_toTest.txt";
-    private static final String folderPath = "C:\\Users\\omars\\OneDrive\\Desktop\\Large_Folder_to Test";
+    private static final String filePath = "C:\\Users\\omars\\IdeaProjects\\Concurent_1st_MiniProject\\src\\Large_File_toTest.txt";
+    private static final String folderPath = "C:\\Users\\omars\\IdeaProjects\\Concurent_1st_MiniProject\\src\\Large_Folder_to Test";
 
     public static void main(String[] args) {
         while (true) {
