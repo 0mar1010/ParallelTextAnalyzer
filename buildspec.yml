@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      # Install dependencies (Ubuntu)
+      - apt-get update -y
+      - apt-get install -y php8.1-cli php8.1-mbstring php8.1-zip php8.1-xml unzip
+      - curl -sS https://getcomposer.org/installer | php -- --install-dir=./ --filename=composer
+
+  build:
+    commands:
+      # Install project dependencies
+      - php composer install --no-interaction --no-progress --no-dev
+
+artifacts:
+  files:
+    - '**/*'           # Include all files
+  base-directory: .    # Root directory
+  discard-paths: no    # Keep folder structure
+
+cache:
+  paths:
+    - vendor/**/*      # Cache dependencies
